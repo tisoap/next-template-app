@@ -1,0 +1,55 @@
+{
+	"root": true,
+	"parserOptions": {
+		"ecmaVersion": 2020,
+		"sourceType": "module",
+		"ecmaFeatures": {
+			"impliedStrict": true,
+			"jsx": true
+		}
+	},
+	"settings": {
+		"react": {
+			"version": "detect"
+		}
+	},
+	"env": {
+		"browser": true,
+		"node": true,
+		"jest": true
+	},
+	"globals": {
+		"Promise": true
+	},
+	"plugins": ["eslint-plugin-import-helpers"],
+	"extends": [
+		"eslint:recommended",
+		"plugin:react/recommended",
+		"plugin:jsx-a11y/recommended",
+		"plugin:prettier/recommended"
+	],
+	"rules": {
+		"import-helpers/order-imports": [
+			"error",
+			{
+				"newlinesBetween": "always",
+				"groups": [
+					"module",
+					["parent", "sibling", "index"],
+					"/\\.scss$/"
+				],
+				"alphabetize": { "order": "asc", "ignoreCase": true }
+			}
+		],
+		"prettier/prettier": ["error", {}, { "usePrettierrc": true }],
+		"react/react-in-jsx-scope": "off",
+		"jsx-a11y/anchor-is-valid": [
+			"error",
+			{
+				"components": ["Link"],
+				"specialLink": ["hrefLeft", "hrefRight"],
+				"aspects": ["invalidHref", "preferButton"]
+			}
+		]
+	}
+}
