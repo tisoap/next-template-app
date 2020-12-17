@@ -34,10 +34,10 @@ $ yarn dev
 Este template conta com:
 
 - Framework [Next.js](https://nextjs.org/)
-- Gerenciamento de estado e side effects com [Redux Toolkit](https://redux-toolkit.js.org/)
 - Biblioteca de componentes [Chakra UI](https://chakra-ui.com/)
+- Gerenciamento de estado e side effects com [Redux Toolkit](https://redux-toolkit.js.org/)
 - Testes automatizados com [Jest](https://jestjs.io/) e [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/)
 - Continuous Integration com [GitHub Actions](https://github.com/features/actions)
 - Documentação de componentes com [Storybook](https://storybook.js.org/)
 - Suporte a estilos [Sass](https://sass-lang.com/)
-- Padronização de estilos com [ESLint](https://eslint.org/) e [StyleLint](https://stylelint.io/)
+- Padronização de estilos com [ESLint](https://eslint.org/), [Prettier](https://prettier.io/) e [StyleLint](https://stylelint.io/)
