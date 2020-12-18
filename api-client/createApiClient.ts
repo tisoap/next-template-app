@@ -1,8 +1,8 @@
-import axios from 'axios'
+import axios, { AxiosInstance, AxiosResponse, AxiosError } from 'axios'
 
-const getRequestData = (response) => response?.data ?? {}
+const getRequestData = (response: AxiosResponse) => response?.data ?? {}
 
-const getErrorData = (error) => {
+const getErrorData = (error: AxiosError) => {
 	const data = {
 		message: error?.message ?? 'Unknown error',
 		status: error?.response?.status ?? 0,
@@ -12,7 +12,7 @@ const getErrorData = (error) => {
 	throw data
 }
 
-export const createApiClient = (url) => {
+export const createApiClient = (url: string): AxiosInstance => {
 	const api = axios.create({
 		baseURL: url,
 		timeout: 5000
