@@ -9,7 +9,6 @@ module.exports = {
 		'@chakra-ui/react': { disable: true },
   },
 	webpackFinal: async (config) => {
-
 		// Add support for SASS modules
 		config.module.rules.push({
 			test: /\.scss$/,

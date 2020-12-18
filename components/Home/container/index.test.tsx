@@ -1,5 +1,6 @@
 import { fireEvent, cleanup, act } from '@testing-library/react'
 import appClient from 'api-client/app'
+import React from 'react'
 import { renderWithState } from 'utils/test-utils'
 
 import { HomeContainer } from '.'
@@ -20,15 +21,16 @@ describe('Home Container', () => {
 
 	test('Renders fetched message', async () => {
 		const options = { state: initialState }
+
 		const newMessage = 'Test OK'
 		const initialMessage = initialState.hello.message
 
 		const { getByText } = renderWithState(<HomeContainer />, options)
 		expect(getByText(initialMessage)).toBeInTheDocument()
 
-		jest
-			.spyOn(appClient, 'getHello')
-			.mockImplementation(() => Promise.resolve({ message: newMessage }))
+		const mockResponse = Promise.resolve({ message: newMessage })
+		const spy = jest.spyOn(appClient, 'getHello') as jest.Mock
+		spy.mockReturnValue(mockResponse)
 
 		const button = getByText('Click me')
 		await act(async () => fireEvent.click(button))

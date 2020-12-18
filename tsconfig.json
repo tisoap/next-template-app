@@ -6,8 +6,8 @@
       "dom.iterable",
       "esnext"
     ],
-		"allowJs": true,
-		"checkJs": true,
+    "allowJs": true,
+    "checkJs": true,
     "skipLibCheck": true,
     "strict": false,
     "forceConsistentCasingInFileNames": true,
@@ -17,8 +17,8 @@
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
-		"jsx": "preserve",
-		"baseUrl": "."
+    "jsx": "preserve",
+    "baseUrl": "."
   },
   "include": [
     "next-env.d.ts",

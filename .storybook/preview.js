@@ -1,4 +1,5 @@
-import { themes } from '@storybook/theming';
+import { themes } from '@storybook/theming'
+
 import { ThemeProvider } from '../providers'
 
 export const parameters = {
