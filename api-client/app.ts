@@ -1,4 +1,4 @@
-import { AxiosPromise } from 'axios'
+import type { AxiosPromise } from 'axios'
 
 import { createApiClient } from './createApiClient'
 

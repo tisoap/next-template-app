@@ -1,4 +1,5 @@
-import axios, { AxiosInstance, AxiosResponse, AxiosError } from 'axios'
+import axios from 'axios'
+import type { AxiosInstance, AxiosResponse, AxiosError } from 'axios'
 
 const getRequestData = (response: AxiosResponse) => response?.data ?? {}
 

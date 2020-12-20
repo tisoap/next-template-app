@@ -1,6 +1,6 @@
 import { Button, Center, Text, Box } from '@chakra-ui/react'
 import Head from 'next/head'
-import { VFC } from 'react'
+import type { VoidFunctionComponent } from 'react'
 
 export interface HomeProps {
 	loading?: boolean
@@ -8,7 +8,11 @@ export interface HomeProps {
 	onClick(): void
 }
 
-export const Home: VFC<HomeProps> = ({ loading, message, onClick }) => {
+export const Home: VoidFunctionComponent<HomeProps> = ({
+	loading,
+	message,
+	onClick
+}) => {
 	const text = message || '...?'
 
 	return (
