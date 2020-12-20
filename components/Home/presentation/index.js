@@ -1,6 +1,5 @@
 import { Button, Center, Text, Box } from '@chakra-ui/react'
 import Head from 'next/head'
-import PropTypes from 'prop-types'
 
 export const Home = ({ loading, message, onClick }) => {
 	const text = message || '...?'
@@ -38,10 +37,4 @@ export const Home = ({ loading, message, onClick }) => {
 			</Center>
 		</>
 	)
-}
-
-Home.propTypes = {
-	loading: PropTypes.bool,
-	message: PropTypes.string,
-	onClick: PropTypes.func
 }

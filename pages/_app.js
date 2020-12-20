@@ -1,4 +1,3 @@
-import PropTypes from 'prop-types'
 import { ThemeProvider, StoreProvider } from 'providers'
 
 function MyApp({ Component, pageProps }) {
@@ -12,8 +11,3 @@ function MyApp({ Component, pageProps }) {
 }
 
 export default MyApp
-
-MyApp.propTypes = {
-	Component: PropTypes.any,
-	pageProps: PropTypes.object
-}
