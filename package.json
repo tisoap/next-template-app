@@ -13,7 +13,7 @@
   "scripts": {
     "build": "next build",
     "build:storybook": "build-storybook --quiet --loglevel error",
-    "chromatic": "chromatic --project-token CHROMATIC_PROJECT_TOKEN --exit-zero-on-changes",
+    "chromatic": "chromatic --project-token CHROMATIC_PROJECT_TOKEN",
     "dev": "next dev",
     "lint:code": "eslint ./ --ext .js,.ts,.tsx --fix",
     "lint:style": "stylelint ./**/*.{scss,css} --fix",
