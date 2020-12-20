@@ -22,13 +22,20 @@
 	"globals": {
 		"Promise": true
 	},
-	"plugins": ["@typescript-eslint", "eslint-plugin-import-helpers"],
+	"plugins": [
+		"@typescript-eslint",
+		"jest-dom",
+		"testing-library",
+		"eslint-plugin-import-helpers"
+	],
 	"extends": [
 		"eslint:recommended",
 		"plugin:react/recommended",
 		"plugin:jsx-a11y/recommended",
 		"plugin:prettier/recommended",
-		"plugin:@typescript-eslint/recommended"
+		"plugin:@typescript-eslint/recommended",
+		"plugin:testing-library/react",
+		"plugin:jest-dom/recommended"
 	],
 	"rules": {
 		"import-helpers/order-imports": [
