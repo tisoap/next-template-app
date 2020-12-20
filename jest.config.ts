@@ -2,6 +2,7 @@ const config = {
 	transform: {
 		'^.+\\.(j|t)sx?$': 'babel-jest'
 	},
+	moduleFileExtensions: ['js', 'ts', 'tsx'],
 	setupFilesAfterEnv: ['<rootDir>/jest.setup.ts'],
 	testPathIgnorePatterns: ['<rootDir>/.next/', '<rootDir>/node_modules/'],
 	moduleNameMapper: {

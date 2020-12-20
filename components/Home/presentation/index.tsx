@@ -1,7 +1,14 @@
 import { Button, Center, Text, Box } from '@chakra-ui/react'
 import Head from 'next/head'
+import { VFC } from 'react'
 
-export const Home = ({ loading, message, onClick }) => {
+export interface HomeProps {
+	loading?: boolean
+	message?: string
+	onClick(): void
+}
+
+export const Home: VFC<HomeProps> = ({ loading, message, onClick }) => {
 	const text = message || '...?'
 
 	return (

@@ -10,8 +10,9 @@ describe('Button', () => {
 	})
 
 	test('Renders message', () => {
+		const fn = jest.fn()
 		const message = 'My Button'
-		const { getByText } = render(<Home message={message} />)
+		const { getByText } = render(<Home onClick={fn} message={message} />)
 		expect(getByText(message)).toBeInTheDocument()
 	})
 

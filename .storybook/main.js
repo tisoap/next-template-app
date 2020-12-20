@@ -1,7 +1,7 @@
 const path = require('path')
 
 module.exports = {
-	stories: ['../components/**/*.stories.js'],
+	stories: ['../components/**/*.stories.tsx'],
 	addons: ['@storybook/addon-links', '@storybook/addon-essentials'],
 	refs: {
 		// Oficial Chakra UI page does not support Storybook Composition
