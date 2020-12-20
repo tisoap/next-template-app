@@ -5,8 +5,8 @@ Este projeto foi iniciado com o template [next-template-app](https://github.com/
 ## Requerimentos
 
 - [Git](https://git-scm.com/)
-- [Node (versão 14 ou superior)](https://nodejs.org/en/)
-- [Yarn (versão 1.22 ou superior)](https://yarnpkg.com/lang/en/)
+- [Node](https://nodejs.org/en/)
+- [Yarn](https://yarnpkg.com/lang/en/)
 
 ## Instalação e inicialização do projeto
 
@@ -21,6 +21,7 @@ $ yarn dev
 
 - `yarn build`: Cria um build de produção do projeto
 - `yarn build:storybook`: Cria um build de produção da biblioteca de componentes
+- `yarn chromatic`: Publica a biblioteca de componentes para o Chromatic, necessário passar parâmetro `--project-token`
 - `yarn dev`: Inicia o projeto com hot reload em `http://localhost:3000`
 - `yarn lint:code`: Linter de código com correção automática
 - `yarn lint:style`: Linter de folhas de estilo com correção automática
@@ -37,8 +38,9 @@ Este template conta com:
 - Tipagem com [TypeScript](https://www.typescriptlang.org/)
 - Biblioteca de componentes [Chakra UI](https://chakra-ui.com/)
 - Gerenciamento de estado com [Redux Toolkit](https://redux-toolkit.js.org/)
-- Testes automatizados com [Jest](https://jestjs.io/) e [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/)
-- Continuous Integration com [GitHub Actions](https://github.com/features/actions)
+- Testes unitários com [Jest](https://jestjs.io/) e [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/)
+- Testes de regressão visual com [Chromatic](https://www.chromatic.com/)
+- Integração contínua com [GitHub Actions](https://github.com/features/actions)
 - Documentação de componentes com [Storybook](https://storybook.js.org/)
 - Suporte a estilos [Sass](https://sass-lang.com/)
 - Padronização de estilos com [ESLint](https://eslint.org/), [Prettier](https://prettier.io/) e [StyleLint](https://stylelint.io/)
