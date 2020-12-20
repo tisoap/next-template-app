@@ -1,5 +1,6 @@
 {
 	"root": true,
+	"parser": "@typescript-eslint/parser",
 	"parserOptions": {
 		"ecmaVersion": 2020,
 		"sourceType": "module",
@@ -21,12 +22,13 @@
 	"globals": {
 		"Promise": true
 	},
-	"plugins": ["eslint-plugin-import-helpers"],
+	"plugins": ["@typescript-eslint", "eslint-plugin-import-helpers"],
 	"extends": [
 		"eslint:recommended",
 		"plugin:react/recommended",
 		"plugin:jsx-a11y/recommended",
-		"plugin:prettier/recommended"
+		"plugin:prettier/recommended",
+		"plugin:@typescript-eslint/recommended"
 	],
 	"rules": {
 		"import-helpers/order-imports": [
@@ -43,6 +45,7 @@
 		],
 		"prettier/prettier": ["error", {}, { "usePrettierrc": true }],
 		"react/react-in-jsx-scope": "off",
+		"react/prop-types": "off",
 		"jsx-a11y/anchor-is-valid": [
 			"error",
 			{

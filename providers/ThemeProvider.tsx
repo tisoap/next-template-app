@@ -1,16 +1,12 @@
 import { ChakraProvider } from '@chakra-ui/react'
-import PropTypes from 'prop-types'
+import type { FC } from 'react'
 
 import { theme } from './theme'
 
-export function ThemeProvider({ children }) {
+export const ThemeProvider: FC = ({ children }) => {
 	return (
 		<ChakraProvider theme={theme} resetCSS>
 			{children}
 		</ChakraProvider>
 	)
-}
-
-ThemeProvider.propTypes = {
-	children: PropTypes.node
 }

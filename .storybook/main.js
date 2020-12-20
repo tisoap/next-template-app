@@ -1,15 +1,14 @@
 const path = require('path')
 
 module.exports = {
-	stories: ['../components/**/*.stories.js'],
+	stories: ['../components/**/*.stories.tsx'],
 	addons: ['@storybook/addon-links', '@storybook/addon-essentials'],
 	refs: {
 		// Oficial Chakra UI page does not support Storybook Composition
 		// https://chakra-ui.netlify.app/
 		'@chakra-ui/react': { disable: true },
-  },
+	},
 	webpackFinal: async (config) => {
-
 		// Add support for SASS modules
 		config.module.rules.push({
 			test: /\.scss$/,

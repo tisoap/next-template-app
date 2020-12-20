@@ -1,8 +1,18 @@
 import { Button, Center, Text, Box } from '@chakra-ui/react'
 import Head from 'next/head'
-import PropTypes from 'prop-types'
+import type { VoidFunctionComponent } from 'react'
 
-export const Home = ({ loading, message, onClick }) => {
+export interface HomeProps {
+	loading?: boolean
+	message?: string
+	onClick(): void
+}
+
+export const Home: VoidFunctionComponent<HomeProps> = ({
+	loading,
+	message,
+	onClick
+}) => {
 	const text = message || '...?'
 
 	return (
@@ -38,10 +48,4 @@ export const Home = ({ loading, message, onClick }) => {
 			</Center>
 		</>
 	)
-}
-
-Home.propTypes = {
-	loading: PropTypes.bool,
-	message: PropTypes.string,
-	onClick: PropTypes.func
 }

@@ -1,23 +1,13 @@
-import { fireEvent, cleanup, act } from '@testing-library/react'
+import { fireEvent, act } from '@testing-library/react'
 import appClient from 'api-client/app'
 import { renderWithState } from 'utils/test-utils'
+import type { PartialAppState } from 'utils/test-utils'
 
 import { HomeContainer } from '.'
 
-const initialState = {
-	hello: {
-		loading: false,
-		error: '',
-		message: 'Hello!'
-	}
-}
+const initialState: PartialAppState = { hello: { message: 'Hello!' } }
 
 describe('Home Container', () => {
-	afterEach(() => {
-		cleanup()
-		jest.restoreAllMocks()
-	})
-
 	test('Renders fetched message', async () => {
 		const options = { state: initialState }
 		const newMessage = 'Test OK'
@@ -26,9 +16,9 @@ describe('Home Container', () => {
 		const { getByText } = renderWithState(<HomeContainer />, options)
 		expect(getByText(initialMessage)).toBeInTheDocument()
 
-		jest
-			.spyOn(appClient, 'getHello')
-			.mockImplementation(() => Promise.resolve({ message: newMessage }))
+		const spy = jest.spyOn(appClient, 'getHello')
+		const mockResponse = Promise.resolve({ message: newMessage })
+		spy.mockReturnValue(mockResponse)
 
 		const button = getByText('Click me')
 		await act(async () => fireEvent.click(button))

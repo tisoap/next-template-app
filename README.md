@@ -5,8 +5,8 @@ Este projeto foi iniciado com o template [next-template-app](https://github.com/
 ## Requerimentos
 
 - [Git](https://git-scm.com/)
-- [Node (versão 12 ou superior)](https://nodejs.org/en/)
-- [Yarn (versão 1.21 ou superior)](https://yarnpkg.com/lang/en/)
+- [Node (versão 14 ou superior)](https://nodejs.org/en/)
+- [Yarn (versão 1.22 ou superior)](https://yarnpkg.com/lang/en/)
 
 ## Instalação e inicialização do projeto
 
@@ -22,7 +22,7 @@ $ yarn dev
 - `yarn build`: Cria um build de produção do projeto
 - `yarn build:storybook`: Cria um build de produção da biblioteca de componentes
 - `yarn dev`: Inicia o projeto com hot reload em `http://localhost:3000`
-- `yarn lint:js`: Linter de código com correção automática
+- `yarn lint:code`: Linter de código com correção automática
 - `yarn lint:style`: Linter de folhas de estilo com correção automática
 - `yarn start`: Inicia o projeto em `http://localhost:3000`, sendo necessário ter executado `yarn build` antes
 - `yarn storybook`: Inicia a biblioteca de componentes com hot reload em `http://localhost:6006`

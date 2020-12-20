@@ -1,7 +1,7 @@
-import PropTypes from 'prop-types'
+import type { AppProps } from 'next/app'
 import { ThemeProvider, StoreProvider } from 'providers'
 
-function MyApp({ Component, pageProps }) {
+function MyApp({ Component, pageProps }: AppProps): JSX.Element {
 	return (
 		<StoreProvider>
 			<ThemeProvider>
@@ -12,8 +12,3 @@ function MyApp({ Component, pageProps }) {
 }
 
 export default MyApp
-
-MyApp.propTypes = {
-	Component: PropTypes.any,
-	pageProps: PropTypes.object
-}
