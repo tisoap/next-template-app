@@ -1,14 +1,9 @@
-import { fireEvent, render, cleanup } from '@testing-library/react'
+import { fireEvent, render } from '@testing-library/react'
 import React from 'react'
 
 import { Home } from '.'
 
 describe('Button', () => {
-	afterEach(() => {
-		cleanup()
-		jest.restoreAllMocks()
-	})
-
 	test('Renders message', () => {
 		const fn = jest.fn()
 		const message = 'My Button'

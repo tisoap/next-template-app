@@ -7,7 +7,7 @@ module.exports = {
 		// Oficial Chakra UI page does not support Storybook Composition
 		// https://chakra-ui.netlify.app/
 		'@chakra-ui/react': { disable: true },
-  },
+	},
 	webpackFinal: async (config) => {
 		// Add support for SASS modules
 		config.module.rules.push({

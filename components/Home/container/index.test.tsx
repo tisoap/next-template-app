@@ -1,4 +1,4 @@
-import { fireEvent, cleanup, act } from '@testing-library/react'
+import { fireEvent, act } from '@testing-library/react'
 import appClient from 'api-client/app'
 import React from 'react'
 import { renderWithState } from 'utils/test-utils'
@@ -14,11 +14,6 @@ const initialState = {
 }
 
 describe('Home Container', () => {
-	afterEach(() => {
-		cleanup()
-		jest.restoreAllMocks()
-	})
-
 	test('Renders fetched message', async () => {
 		const options = { state: initialState }
 

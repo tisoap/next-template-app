@@ -18,7 +18,9 @@ const config = {
 			statements: 100
 		}
 	},
-	moduleDirectories: ['node_modules', __dirname]
+	moduleDirectories: ['node_modules', __dirname],
+	resetMocks: true,
+	restoreMocks: true
 }
 
 export default config
