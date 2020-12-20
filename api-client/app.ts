@@ -1,15 +1,15 @@
-import type { AxiosPromise } from 'axios'
+import axios from 'axios'
+import type { HelloResponse } from 'pages/api/hello'
 
-import { createApiClient } from './createApiClient'
+const api = axios.create({
+	baseURL: '/api',
+	timeout: 5000
+})
 
-const fetch = createApiClient('/api')
-
-interface HelloResponse {
-	message: string
+const getHello = async (): Promise<HelloResponse> => {
+	const response = await api.get<HelloResponse>('/hello')
+	return response.data
 }
-
-const getHello = (): AxiosPromise<HelloResponse> =>
-	fetch({ method: 'get', url: '/hello' })
 
 const appClient = {
 	getHello

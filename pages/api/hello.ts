@@ -1,6 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
 
-type Data = {
+export type HelloResponse = {
 	message: string
 }
 
@@ -8,7 +8,7 @@ const delay = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms))
 
 export default async (
 	req: NextApiRequest,
-	res: NextApiResponse<Data>
+	res: NextApiResponse<HelloResponse>
 ): Promise<void> => {
 	await delay(1000)
 	res.statusCode = 200
