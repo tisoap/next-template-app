@@ -5,8 +5,8 @@ Este projeto foi iniciado com o template [next-template-app](https://github.com/
 ## Requerimentos
 
 - [Git](https://git-scm.com/)
-- [Node (versão 12 ou superior)](https://nodejs.org/en/)
-- [Yarn (versão 1.21 ou superior)](https://yarnpkg.com/lang/en/)
+- [Node (versão 14 ou superior)](https://nodejs.org/en/)
+- [Yarn (versão 1.22 ou superior)](https://yarnpkg.com/lang/en/)
 
 ## Instalação e inicialização do projeto
 
