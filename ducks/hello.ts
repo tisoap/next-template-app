@@ -2,7 +2,7 @@ import { createSlice, createAsyncThunk } from '@reduxjs/toolkit'
 import { appClient } from 'api-client'
 import { createSelector } from 'reselect'
 
-import type { AppState } from './types'
+import type { AppState } from './state'
 
 export const getHello = createAsyncThunk('hello/getHello', async () => {
 	const data = await appClient.getHello()
@@ -17,7 +17,7 @@ export type HelloState = {
 
 export const HELLO_NAME = 'hello'
 
-const initialState: HelloState = {
+export const helloInitialState: HelloState = {
 	loading: false,
 	error: '',
 	message: ''
@@ -25,7 +25,7 @@ const initialState: HelloState = {
 
 const hello = createSlice({
 	name: HELLO_NAME,
-	initialState,
+	initialState: helloInitialState,
 	reducers: {},
 	extraReducers: (builder) => {
 		builder.addCase(getHello.fulfilled, (state, action) => {
