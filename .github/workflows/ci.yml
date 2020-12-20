@@ -1,4 +1,4 @@
-name: Node.js CI
+name: CI
 
 on: [push]
 
@@ -6,18 +6,16 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
-    strategy:
-      matrix:
-        node-version: [14.x]
-
     steps:
-      - name: Checkout
+      - name: Checkout Project
         uses: actions/checkout@v2
-      - name: Use Node.js ${{ matrix.node-version }}
+        with:
+          fetch-depth: 0
+      - name: Use Node.js
         uses: actions/setup-node@v1
         with:
-          node-version: ${{ matrix.node-version }}
-      - name: Cache
+          node-version: '12.x'
+      - name: Load Cache
         uses: actions/cache@v2
         id: cache
         with:
@@ -25,14 +23,17 @@ jobs:
             **/node_modules
             ${{ github.workspace }}/.next/cache
           key: ${{ runner.os }}-${{ hashFiles('**/yarn.lock') }}
-      - name: Dependencies
+      - name: Install Dependencies
         if: steps.cache.outputs.cache-hit != 'true'
         run: yarn install --silent --frozen-lockfile
-      - name: Lint
+      - name: Run Code Linter
         run: yarn lint:code
-      - name: Test
+      - name: Run Unit Tests
         run: yarn test
-      - name: Storybook
-        run: yarn build:storybook
-      - name: Build
-        run: yarn build
+      - name: Publish Storybook
+        uses: chromaui/action@v1
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
+          exitZeroOnChanges: true
+          exitOnceUploaded: true

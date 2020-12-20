@@ -21,7 +21,7 @@ export const Home: VoidFunctionComponent<HomeProps> = ({
 				<title>App</title>
 				<link rel='icon' href='/favicon.ico' />
 			</Head>
-			<Center height='100%' bg='gray.200' p={3}>
+			<Center height='100%' bg='gray.300' p={3}>
 				<Box
 					as='main'
 					w='100%'
