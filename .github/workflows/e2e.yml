@@ -14,18 +14,9 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: '12.x'
-      - name: Load Cache
-        uses: actions/cache@v2
-        id: cache
-        with:
-          path: |
-            **/node_modules
-          key: ${{ runner.os }}-${{ hashFiles('**/yarn.lock') }}
-      - name: Install Dependencies
-        if: steps.cache.outputs.cache-hit != 'true'
-        run: yarn install --silent --frozen-lockfile
       - name: Run E2E Tests
-        # TODO:
-        run: yarn e2e
+        uses: DevExpress/testcafe-action@latest
+        with:
+          args: "chrome tests"
         env:
           TEST_URL: ${{ github.event.deployment_status.target_url }}
