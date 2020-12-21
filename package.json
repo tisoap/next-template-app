@@ -12,15 +12,14 @@
   "author": "Tiso Alvarez Puccinelli",
   "scripts": {
     "build": "next build",
-    "build:storybook": "build-storybook --quiet --loglevel error",
-    "chromatic": "chromatic",
+    "build-storybook": "build-storybook --quiet --loglevel error",
     "dev": "next dev",
-    "lint:code": "eslint ./ --ext .js,.ts,.tsx --fix",
-    "lint:style": "stylelint ./**/*.{scss,css} --fix",
+    "lint-code": "eslint ./ --ext .js,.ts,.tsx",
+    "lint-style": "stylelint ./**/*.{scss,css}",
     "start": "next start",
     "storybook": "start-storybook -p 6006 --quiet",
     "test": "jest --silent",
-    "test:watch": "jest --watch"
+    "test-watch": "jest --watch"
   },
   "dependencies": {
     "@chakra-ui/react": "1.0.4",

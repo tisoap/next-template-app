@@ -1,16 +1,15 @@
-name: CI
+name: End to End Tests
 
-on: [push]
+on: [deployment_status]
 
 jobs:
-  build:
+  e2e:
+    if: github.event.deployment_status.state == 'success'
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout Project
         uses: actions/checkout@v2
-        with:
-          fetch-depth: 0
       - name: Use Node.js
         uses: actions/setup-node@v1
         with:
@@ -21,19 +20,12 @@ jobs:
         with:
           path: |
             **/node_modules
-            ${{ github.workspace }}/.next/cache
           key: ${{ runner.os }}-${{ hashFiles('**/yarn.lock') }}
       - name: Install Dependencies
         if: steps.cache.outputs.cache-hit != 'true'
         run: yarn install --silent --frozen-lockfile
-      - name: Run Code Linter
-        run: yarn lint:code
-      - name: Run Unit Tests
-        run: yarn test
-      - name: Publish Storybook
-        uses: chromaui/action@v1
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
-          exitZeroOnChanges: true
-          exitOnceUploaded: true
+      - name: Run E2E Tests
+        # TODO:
+        run: yarn e2e
+        env:
+          TEST_URL: ${{ github.event.deployment_status.target_url }}
