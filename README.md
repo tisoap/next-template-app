@@ -38,6 +38,7 @@ Este template conta com:
 - Biblioteca de componentes [Chakra UI](https://chakra-ui.com/)
 - Gerenciamento de estado com [Redux Toolkit](https://redux-toolkit.js.org/)
 - Testes unitários com [Jest](https://jestjs.io/) e [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/)
+- Testes End-to-End com [TestCafé](https://devexpress.github.io/testcafe/)
 - Testes de regressão visual com [Chromatic](https://www.chromatic.com/)
 - Integração contínua com [GitHub Actions](https://github.com/features/actions)
 - Documentação de componentes com [Storybook](https://storybook.js.org/)
