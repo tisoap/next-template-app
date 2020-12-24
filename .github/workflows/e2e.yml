@@ -17,6 +17,6 @@ jobs:
       - name: Run E2E Tests
         uses: DevExpress/testcafe-action@latest
         with:
-          args: "chrome tests"
+          args: "chrome e2e/tests --concurrency 2"
         env:
           TEST_URL: ${{ github.event.deployment_status.target_url }}
