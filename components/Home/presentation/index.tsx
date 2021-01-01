@@ -39,10 +39,13 @@ export const Home: VoidFunctionComponent<HomeProps> = ({
 							isLoading={loading}
 							colorScheme='blue'
 							mb={3}
+							id='home-page-button'
 						>
 							Click me
 						</Button>
-						<Text pb={2}>{text}</Text>
+						<Text id='home-page-text' pb={2}>
+							{text}
+						</Text>
 					</Center>
 				</Box>
 			</Center>

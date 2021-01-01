@@ -26,6 +26,7 @@
 		"@typescript-eslint",
 		"jest-dom",
 		"testing-library",
+		"testcafe",
 		"eslint-plugin-import-helpers"
 	],
 	"extends": [
@@ -35,7 +36,8 @@
 		"plugin:prettier/recommended",
 		"plugin:@typescript-eslint/recommended",
 		"plugin:testing-library/react",
-		"plugin:jest-dom/recommended"
+		"plugin:jest-dom/recommended",
+		"plugin:testcafe/recommended"
 	],
 	"rules": {
 		"import-helpers/order-imports": [
