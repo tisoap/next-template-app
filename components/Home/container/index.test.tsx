@@ -26,4 +26,23 @@ describe('Home Container', () => {
 		expect(appClient.getHello).toHaveBeenCalled()
 		expect(getByText(newMessage)).toBeInTheDocument()
 	})
+
+	test('Renders error message', async () => {
+		const options = { state: initialState }
+		const errorMessage = 'An error occurred'
+		const initialMessage = initialState.hello.message
+
+		const { getByText } = renderWithState(<HomeContainer />, options)
+		expect(getByText(initialMessage)).toBeInTheDocument()
+
+		const spy = jest.spyOn(appClient, 'getHello')
+		const mockResponse = Promise.reject({ message: errorMessage })
+		spy.mockReturnValue(mockResponse)
+
+		const button = getByText('Click me')
+		await act(async () => fireEvent.click(button))
+
+		expect(appClient.getHello).toHaveBeenCalled()
+		expect(getByText(errorMessage)).toBeInTheDocument()
+	})
 })

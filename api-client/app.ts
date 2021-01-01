@@ -1,7 +1,7 @@
 import axios from 'axios'
 import type { HelloResponse } from 'pages/api/hello'
 
-const api = axios.create({
+export const api = axios.create({
 	baseURL: '/api',
 	timeout: 5000
 })

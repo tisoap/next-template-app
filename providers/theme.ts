@@ -13,7 +13,7 @@ const config = {
 	initialColorMode: 'light'
 }
 
-const global = {
+const globalStyles = {
 	'html, body, #__next, #root': {
 		height: '100%',
 		width: '100%',
@@ -24,6 +24,6 @@ const global = {
 	}
 }
 
-const styles = { global }
+const styles = { global: globalStyles }
 
 export const theme = extendTheme({ config, breakpoints, styles })

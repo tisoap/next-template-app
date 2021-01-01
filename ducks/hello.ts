@@ -64,3 +64,8 @@ export const helloSelector = createSelector<AppState, string, string>(
 	(state) => state.hello.message,
 	(message) => message
 )
+
+export const messageSelector = createSelector<AppState, string, string>(
+	[errorSelector, helloSelector],
+	(error, message) => (error ? error : message)
+)

@@ -5,6 +5,7 @@ import type { RenderOptions, RenderResult } from '@testing-library/react'
 import type { AppState } from 'ducks/state'
 import { appInitialState } from 'ducks/state'
 import { merge } from 'lodash'
+import { ThemeProvider } from 'providers'
 import { rootReducer } from 'providers/store'
 import React from 'react'
 import type { ReactElement } from 'react'
@@ -39,7 +40,9 @@ export const renderWithState = (
 	const store = createStore(initialState)
 
 	const result = render(
-		<StoreProvider store={store}>{component}</StoreProvider>,
+		<ThemeProvider>
+			<StoreProvider store={store}>{component}</StoreProvider>
+		</ThemeProvider>,
 		rest
 	)
 

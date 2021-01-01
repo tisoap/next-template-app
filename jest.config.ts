@@ -9,7 +9,13 @@ const config = {
 		'\\.(css|less|scss)$': 'identity-obj-proxy'
 	},
 	collectCoverage: true,
-	collectCoverageFrom: ['components/**/*.js', '!components/**/*.stories.js'],
+	collectCoverageFrom: [
+		'api-client/**/*.ts',
+		'components/**/*.{ts, tsx}',
+		'!components/**/*.stories.{ts, tsx}',
+		'ducks/**/*.ts',
+		'providers/**/*.{ts, tsx}'
+	],
 	coverageThreshold: {
 		global: {
 			branches: 100,

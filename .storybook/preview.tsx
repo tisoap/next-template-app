@@ -1,5 +1,5 @@
 import { themes } from '@storybook/theming'
-import { FC } from 'react'
+import type { VoidFunctionComponent } from 'react'
 import { ThemeProvider } from '../providers'
 
 export const parameters = {
@@ -7,7 +7,7 @@ export const parameters = {
 	docs: { theme: themes.dark,},
 }
 
-export const decorators = [(Story: FC) => (
+export const decorators = [(Story: VoidFunctionComponent) => (
 	<ThemeProvider>
 		<Story />
 	</ThemeProvider>
