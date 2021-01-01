@@ -40,7 +40,7 @@ Este template conta com:
 - Testes unitários com [Jest](https://jestjs.io/) e [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/)
 - Testes End-to-End com [TestCafé](https://devexpress.github.io/testcafe/)
 - Testes de regressão visual com [Chromatic](https://www.chromatic.com/)
-- Integração contínua com [GitHub Actions](https://github.com/features/actions)
+- CI/CD com [GitHub Actions](https://github.com/features/actions) e [Vercel](https://vercel.com/)
 - Documentação de componentes com [Storybook](https://storybook.js.org/)
 - Suporte a estilos [Sass](https://sass-lang.com/)
 - Padronização de estilos com [ESLint](https://eslint.org/), [Prettier](https://prettier.io/) e [StyleLint](https://stylelint.io/)
