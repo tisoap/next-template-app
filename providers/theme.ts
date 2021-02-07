@@ -1,17 +1,4 @@
 import { extendTheme } from '@chakra-ui/react'
-import { createBreakpoints } from '@chakra-ui/theme-tools'
-
-const breakpoints = createBreakpoints({
-	sm: '320px',
-	md: '768px',
-	lg: '960px',
-	xl: '1200px'
-})
-
-const config = {
-	useSystemColorMode: false,
-	initialColorMode: 'light'
-}
 
 const globalStyles = {
 	'html, body, #__next, #root': {
@@ -26,4 +13,4 @@ const globalStyles = {
 
 const styles = { global: globalStyles }
 
-export const theme = extendTheme({ config, breakpoints, styles })
+export const theme = extendTheme({ styles })

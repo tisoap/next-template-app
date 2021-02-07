@@ -44,3 +44,4 @@ Este template conta com:
 - Documentação de componentes com [Storybook](https://storybook.js.org/)
 - Suporte a estilos [Sass](https://sass-lang.com/)
 - Padronização de estilos com [ESLint](https://eslint.org/), [Prettier](https://prettier.io/) e [StyleLint](https://stylelint.io/)
+- Cache Offline de dependências com [Yarn offline](https://classic.yarnpkg.com/blog/2016/11/24/offline-mirror/)
