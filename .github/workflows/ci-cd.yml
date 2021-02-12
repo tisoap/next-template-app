@@ -13,7 +13,7 @@ jobs:
         with:
           node-version: '12.x'
       - name: Install Dependencies
-        run: yarn install --silent --offline --frozen-lockfile
+        run: yarn install --silent
       - name: Run Code Linter
         run: yarn lint-code
       - name: Run Unit Tests
