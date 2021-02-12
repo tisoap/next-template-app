@@ -1,30 +1,19 @@
-name: CI/CD
-on: [push]
+name: End-to-End Tests
+on:
+  pull_request:
+    branches: [ main ]
 jobs:
-  build:
+  e2e:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Project
         uses: actions/checkout@v2
-        with:
-          fetch-depth: 0
       - name: Use Node.js
         uses: actions/setup-node@v1
         with:
           node-version: '12.x'
       - name: Install Dependencies
         run: yarn install --silent
-      - name: Run Code Linter
-        run: yarn lint-code
-      - name: Run Unit Tests
-        run: yarn test
-      - name: Publish to Storybook
-        uses: chromaui/action@v1
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
-          exitZeroOnChanges: true
-          exitOnceUploaded: true
       - name: Deploy to Vercel
         id: deploy
         uses: amondnet/vercel-action@v20.0.0
