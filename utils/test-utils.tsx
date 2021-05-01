@@ -39,7 +39,7 @@ export const renderWithState = (
 	const initialState: AppState = merge(appInitialState, state)
 	const store = createStore(initialState)
 
-	const result = render(
+	const view = render(
 		<ThemeProvider>
 			<StoreProvider store={store}>{component}</StoreProvider>
 		</ThemeProvider>,
@@ -47,7 +47,7 @@ export const renderWithState = (
 	)
 
 	return {
-		...result,
+		...view,
 		store
 	}
 }
