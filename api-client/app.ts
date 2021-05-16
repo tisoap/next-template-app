@@ -1,5 +1,5 @@
 import axios from 'axios'
-import type { HelloResponse } from 'pages/api/hello'
+import type { HelloResponse } from 'server/api/hello'
 
 export const api = axios.create({
 	baseURL: '/api',
