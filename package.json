@@ -18,7 +18,7 @@
 		"lint-style": "stylelint ./**/*.{scss,css}",
 		"start": "next start",
 		"storybook": "start-storybook -p 6006 --quiet",
-		"test": "jest --silent",
+		"test": "jest",
 		"test-e2e": "dotenv -e .local.env testcafe chrome e2e/tests",
 		"test-watch": "jest --watch"
 	},
@@ -27,7 +27,7 @@
 		"@chakra-ui/theme-tools": "1.1.6",
 		"@emotion/react": "11.1.5",
 		"@emotion/styled": "11.3.0",
-		"@reduxjs/toolkit": "1.5.0",
+		"@reduxjs/toolkit": "1.5.1",
 		"axios": "0.21.1",
 		"framer-motion": "4.1.11",
 		"lodash": "4.17.21",

@@ -4,7 +4,7 @@ import { render } from '@testing-library/react'
 import type { RenderOptions, RenderResult } from '@testing-library/react'
 import type { AppState } from 'ducks/state'
 import { appInitialState } from 'ducks/state'
-import { merge } from 'lodash'
+import { merge, cloneDeep } from 'lodash'
 import { ThemeProvider } from 'providers'
 import { rootReducer } from 'providers/store'
 import React from 'react'
@@ -35,15 +35,16 @@ export const renderWithState = (
 	component: ReactElement,
 	options: Options
 ): Result => {
-	const { state, ...rest } = options
-	const initialState: AppState = merge(appInitialState, state)
-	const store = createStore(initialState)
+	const { state, ...renderOptions } = options
+	const initialStateClone = cloneDeep(appInitialState)
+	const customInitialState: AppState = merge(initialStateClone, state)
+	const store = createStore(customInitialState)
 
 	const view = render(
 		<ThemeProvider>
 			<StoreProvider store={store}>{component}</StoreProvider>
 		</ThemeProvider>,
-		rest
+		renderOptions
 	)
 
 	return {
