@@ -14,7 +14,8 @@ const config = {
 		'components/**/*.{ts, tsx}',
 		'!components/**/*.stories.{ts, tsx}',
 		'ducks/**/*.ts',
-		'providers/**/*.{ts, tsx}'
+		'providers/**/*.{ts, tsx}',
+		'server/**/*.ts'
 	],
 	coverageThreshold: {
 		global: {
