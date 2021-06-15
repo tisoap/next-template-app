@@ -31,12 +31,12 @@
 	],
 	"extends": [
 		"eslint:recommended",
-		"plugin:react/recommended",
+		"plugin:@typescript-eslint/recommended",
+		"next",
 		"plugin:jsx-a11y/recommended",
 		"plugin:prettier/recommended",
-		"plugin:@typescript-eslint/recommended",
-		"plugin:testing-library/react",
 		"plugin:jest-dom/recommended",
+		"plugin:testing-library/react",
 		"plugin:testcafe/recommended"
 	],
 	"rules": {
@@ -47,14 +47,12 @@
 				"groups": [
 					"module",
 					["parent", "sibling", "index"],
-					"/\\.scss$/"
+					"/\\.s?css$/"
 				],
 				"alphabetize": { "order": "asc", "ignoreCase": true }
 			}
 		],
 		"prettier/prettier": ["error", {}, { "usePrettierrc": true }],
-		"react/react-in-jsx-scope": "off",
-		"react/prop-types": "off",
 		"jsx-a11y/anchor-is-valid": [
 			"error",
 			{

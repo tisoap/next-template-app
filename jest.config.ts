@@ -1,4 +1,5 @@
 const config = {
+	testEnvironment: 'jsdom',
 	transform: {
 		'^.+\\.(j|t)sx?$': 'babel-jest'
 	},
