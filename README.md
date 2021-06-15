@@ -1,47 +1,53 @@
 # Next Template APP
 
-Este projeto foi iniciado com o template [next-template-app](https://github.com/tisoap/next-template-app).
+This project was bootstrapped using [next-template-app](https://github.com/tisoap/next-template-app).
 
-## Requerimentos
+
+## Requirements
 
 - [Git](https://git-scm.com/)
 - [Node](https://nodejs.org/en/)
 - [Yarn](https://yarnpkg.com/lang/en/)
+- [Chrome](https://www.google.com/intl/en-US/chrome/)
 
-## Instalação e inicialização do projeto
 
-Clone o projeto, navegue para a raíz do projeto em um terminal e execute os seguintes comandos:
+## Installation and project initialization
+
+Clone this project using Git. In a terminal, navigate to the cloned project's root folder, and run the following command:
 
 ```bash
-$ yarn
-$ yarn dev
+yarn
+yarn dev
 ```
 
-## Comandos
 
-- `yarn build`: Cria um build de produção do projeto
-- `yarn build-storybook`: Cria um build de produção da biblioteca de componentes
-- `yarn dev`: Inicia o projeto com hot reload em `http://localhost:3000`
-- `yarn lint-code`: Linter de código com correção automática
-- `yarn lint-style`: Linter de folhas de estilo com correção automática
-- `yarn start`: Inicia o projeto em `http://localhost:3000`, sendo necessário ter executado `yarn build` antes
-- `yarn storybook`: Inicia a biblioteca de componentes com hot reload em `http://localhost:6006`
-- `yarn test`: Roda todos os testes automatizados do projeto e o reporte de cobertura de testes
-- `yarn test-watch`: Roda os testes de forma interativa, re-executando a cada alteração no projeto
+## Commands
 
-## Tecnologias
+- `yarn build`: Creates a production build from this project
+- `yarn build-storybook`: Creates a production build from the component library docs
+- `yarn dev`: Starts the project with hot reload at `http://localhost:3000`
+- `yarn lint-code`: Runs the code linter
+- `yarn lint-style`: Runs the stylesheet linter
+- `yarn start`: Starts the project at `http://localhost:3000`, but you need to execute the `yarn build` command beforehand
+- `yarn storybook`: Starts the component library docs with hot reload at `http://localhost:6006`
+- `yarn test`: Runs all unit tests and code coverage report
+- `yarn test`: Runs all end to end tests using the locally installed Chrome browser, but you need to have started the project in another terminal for it to work
+- `yarn test-watch`: Runs all unit tests in watch mode, re-executing the relevant tests at every file change
 
-Este template conta com:
 
-- Framework [Next.js](https://nextjs.org/)
-- Tipagem com [TypeScript](https://www.typescriptlang.org/)
-- Biblioteca de componentes [Chakra UI](https://chakra-ui.com/)
-- Gerenciamento de estado com [Redux Toolkit](https://redux-toolkit.js.org/)
-- Testes unitários com [Jest](https://jestjs.io/) e [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/)
-- Testes End-to-End com [TestCafé](https://devexpress.github.io/testcafe/)
-- Testes de regressão visual com [Chromatic](https://www.chromatic.com/)
-- CI/CD com [GitHub Actions](https://github.com/features/actions) e [Vercel](https://vercel.com/)
-- Documentação de componentes com [Storybook](https://storybook.js.org/)
-- Suporte a estilos [Sass](https://sass-lang.com/)
-- Padronização de estilos com [ESLint](https://eslint.org/), [Prettier](https://prettier.io/) e [StyleLint](https://stylelint.io/)
-- Cache Offline de dependências com [Yarn offline](https://classic.yarnpkg.com/blog/2016/11/24/offline-mirror/)
+## Technologies
+
+This template uses:
+
+- [Next.js](https://nextjs.org/) framework
+- [TypeScript](https://www.typescriptlang.org/) type checking
+- [Chakra UI](https://chakra-ui.com/) as the default component library
+- [Redux Toolkit](https://redux-toolkit.js.org/) for state management
+- [Jest](https://jestjs.io/) and [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/) for unit tests
+- [TestCafé](https://devexpress.github.io/testcafe/) for End-to-End tests
+- [Chromatic](https://www.chromatic.com/) for visual regression testing
+- [GitHub Actions](https://github.com/features/actions) and [Vercel](https://vercel.com/) for CI/CD pipelines
+- [Storybook](https://storybook.js.org/) for component documentation
+- [Sass](https://sass-lang.com/) support
+- [ESLint](https://eslint.org/), [Prettier](https://prettier.io/) and [StyleLint](https://stylelint.io/) for code style standardization
+- [Yarn offline](https://classic.yarnpkg.com/blog/2016/11/24/offline-mirror/) for caching project dependencies
