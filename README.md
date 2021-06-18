@@ -16,9 +16,10 @@ This project was bootstrapped using [next-template-app](https://github.com/tisoa
 Clone this project using Git. In a terminal, navigate to the cloned project's root folder, and run the following command:
 
 ```bash
-yarn
-yarn dev
+yarn && yarn dev
 ```
+
+Once ready, open [localhost:3000](http://localhost:3000) in you browser.
 
 
 ## Commands
