@@ -39,7 +39,7 @@ export const Home: VoidFunctionComponent<HomeProps> = ({
 						<Button
 							onClick={() => onClick()}
 							isLoading={loading}
-							colorScheme='blue'
+							colorScheme='green'
 							mb={3}
 							id='home-page-button'
 						>
