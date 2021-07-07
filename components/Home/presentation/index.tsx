@@ -2,6 +2,8 @@ import { Button, Center, Text, Box } from '@chakra-ui/react'
 import Head from 'next/head'
 import type { VoidFunctionComponent } from 'react'
 
+import styles from './styles.module.scss'
+
 export interface HomeProps {
 	loading?: boolean
 	message?: string
@@ -43,7 +45,7 @@ export const Home: VoidFunctionComponent<HomeProps> = ({
 						>
 							Click me
 						</Button>
-						<Text id='home-page-text' pb={2}>
+						<Text id='home-page-text' pb={2} className={styles.test}>
 							{text}
 						</Text>
 					</Center>
