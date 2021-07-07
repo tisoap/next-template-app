@@ -12,6 +12,6 @@ export const hello = async (
 	await delay(1000)
 	res.statusCode = 200
 	return res.json({
-		message: 'Hello! This message was fetched from a Next API route'
+		message: 'Server side message'
 	})
 }
