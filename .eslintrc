@@ -33,7 +33,6 @@
 		"eslint:recommended",
 		"plugin:@typescript-eslint/recommended",
 		"next",
-		"plugin:jsx-a11y/recommended",
 		"plugin:prettier/recommended",
 		"plugin:jest-dom/recommended",
 		"plugin:testing-library/react",
@@ -44,11 +43,7 @@
 			"error",
 			{
 				"newlinesBetween": "always",
-				"groups": [
-					"module",
-					["parent", "sibling", "index"],
-					"/\\.s?css$/"
-				],
+				"groups": ["module", ["parent", "sibling", "index"], "/\\.s?css$/"],
 				"alphabetize": { "order": "asc", "ignoreCase": true }
 			}
 		],

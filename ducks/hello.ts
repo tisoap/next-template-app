@@ -42,7 +42,7 @@ const hello = createSlice({
 
 		builder.addCase(getHello.rejected, (state, action) => {
 			state.loading = false
-			state.error = action.error.message
+			state.error = action.error.message || ''
 			state.message = ''
 		})
 	}
@@ -50,22 +50,22 @@ const hello = createSlice({
 
 export default hello.reducer
 
-export const loadingSelector = createSelector<AppState, boolean, boolean>(
-	(state) => state.hello.loading,
+export const loadingSelector = createSelector(
+	(state: AppState) => state.hello.loading,
 	(loading) => loading
 )
 
-export const errorSelector = createSelector<AppState, string, string>(
-	(state) => state.hello.error,
+export const errorSelector = createSelector(
+	(state: AppState) => state.hello.error,
 	(error) => error
 )
 
-export const helloSelector = createSelector<AppState, string, string>(
-	(state) => state.hello.message,
+export const helloSelector = createSelector(
+	(state: AppState) => state.hello.message,
 	(message) => message
 )
 
-export const messageSelector = createSelector<AppState, string, string>(
+export const messageSelector = createSelector(
 	[errorSelector, helloSelector],
 	(error, message) => (error ? error : message)
 )
