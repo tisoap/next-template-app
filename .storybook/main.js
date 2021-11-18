@@ -6,6 +6,9 @@ module.exports = {
 	},
 	stories: ['../components/**/*.stories.tsx'],
 	addons: ['@storybook/addon-links', '@storybook/addon-essentials'],
+	typescript: {
+    check: true, // type-check stories during Storybook build
+  },
 	refs: {
 		// Official Chakra UI page does not support Storybook Composition
 		// https://chakra-ui.netlify.app/

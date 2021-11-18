@@ -1,7 +1,8 @@
 const config = {
 	testEnvironment: 'jsdom',
 	transform: {
-		'^.+\\.(j|t)sx?$': 'babel-jest'
+		// https://github.com/facebook/jest/issues/1468#issuecomment-361260279
+		'^.+\\.(j|t)sx?$': '<rootDir>/jestPreprocess.js'
 	},
 	moduleFileExtensions: ['js', 'ts', 'tsx'],
 	setupFilesAfterEnv: ['<rootDir>/jest.setup.ts'],
@@ -28,7 +29,12 @@ const config = {
 	},
 	moduleDirectories: ['node_modules', __dirname],
 	resetMocks: true,
-	restoreMocks: true
+	restoreMocks: true,
+	globals: {
+		'babel-jest': {
+			babelrcFile: '.storybook/.babelrc'
+		}
+	}
 }
 
 export default config
