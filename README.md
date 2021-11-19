@@ -2,14 +2,12 @@
 
 This project was bootstrapped using [next-template-app](https://github.com/tisoap/next-template-app).
 
-
 ## Requirements
 
 - [Git](https://git-scm.com/)
 - [Node](https://nodejs.org/en/)
 - [Yarn](https://yarnpkg.com/lang/en/)
 - [Chrome](https://www.google.com/intl/en-US/chrome/)
-
 
 ## Installation and project initialization
 
@@ -20,7 +18,6 @@ yarn && yarn dev
 ```
 
 Once ready, open [localhost:3000](http://localhost:3000) in you browser.
-
 
 ## Commands
 
@@ -34,7 +31,6 @@ Once ready, open [localhost:3000](http://localhost:3000) in you browser.
 - `yarn test`: Runs all unit tests and code coverage report
 - `yarn test`: Runs all end to end tests using the locally installed Chrome browser, but you need to have started the project in another terminal for it to work
 - `yarn test-watch`: Runs all unit tests in watch mode, re-executing the relevant tests at every file change
-
 
 ## Technologies
 
@@ -51,4 +47,4 @@ This template uses:
 - [Storybook](https://storybook.js.org/) for component documentation
 - [Sass](https://sass-lang.com/) support
 - [ESLint](https://eslint.org/), [Prettier](https://prettier.io/) and [StyleLint](https://stylelint.io/) for code style standardization
-- [Yarn offline](https://classic.yarnpkg.com/blog/2016/11/24/offline-mirror/) for caching project dependencies
+- [Yarn](https://yarnpkg.com/) for caching project dependencies
