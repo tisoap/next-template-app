@@ -1,2 +1,4 @@
-.offline-cache/* linguist-generated
 .storybook/* linguist-documentation
+.yarn/* linguist-generated
+.pnp.cjs linguist-generated
+.pnp.loader.mjs linguist-generated

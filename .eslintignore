@@ -6,3 +6,4 @@ coverage
 .storybook
 jest.config.js
 jest.setup.js
+jestPreprocess.js
