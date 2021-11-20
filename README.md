@@ -69,3 +69,9 @@ This template uses:
 - [Sass](https://sass-lang.com/) support
 - [ESLint](https://eslint.org/), [Prettier](https://prettier.io/) and [StyleLint](https://stylelint.io/) for code style standardization
 - [Yarn](https://yarnpkg.com/) for caching project dependencies
+
+### Support
+
+Liked this project and want to show your support? Buy me a coffee:
+
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/J3J472RAJ)
