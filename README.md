@@ -52,6 +52,7 @@ Once ready, open [localhost:3000](http://localhost:3000) in you browser.
 - `yarn test-e2e`: Runs all end to end tests using the locally installed Chrome browser, but you need to have started the project in another terminal for it to work
 - `yarn test-watch`: Runs all unit tests in watch mode, re-executing the relevant tests at every file change
 - `yarn type-check`: Check validity of all types in the project
+- `yarn spellcheck`: Checks for spelling typos in code
 
 ## Technologies
 
@@ -69,6 +70,7 @@ This template uses:
 - [Sass](https://sass-lang.com/) support
 - [ESLint](https://eslint.org/), [Prettier](https://prettier.io/) and [StyleLint](https://stylelint.io/) for code style standardization
 - [Yarn](https://yarnpkg.com/) for caching project dependencies
+- [CSpell](https://cspell.org/) for code spell checking
 
 ### Support
 

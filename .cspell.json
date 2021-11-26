@@ -1,0 +1,17 @@
+{
+	"version": "0.2",
+	"language": "en,lorem",
+	"ignorePaths": [
+		".vscode/**",
+		".yarn/**",
+		"coverage/**",
+		"node_modules/**",
+		"storybook-static/**",
+		".eslintrc",
+		"next.config.js",
+		"package.json",
+		"yarn.lock"
+	],
+	"allowCompoundWords": false,
+	"words": ["Tiso", "Puccinelli", "chakra", "reduxjs", "testcafe", "Vercel"]
+}

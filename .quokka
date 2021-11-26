@@ -1,0 +1,15 @@
+{
+	"babel": {
+		"ts": true,
+		"presets": [
+			"@babel/preset-typescript",
+			"next/babel"
+		]
+	},
+	"ts": {
+		"compilerOptions": {
+			"target": "es5",
+			"baseUrl": "."
+		}
+	}
+}
