@@ -7,3 +7,5 @@ coverage
 jest.config.js
 jest.setup.js
 jestPreprocess.js
+next.config.js
+.eslintrc.js

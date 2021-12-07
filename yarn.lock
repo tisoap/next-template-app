@@ -5107,7 +5107,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@testing-library/user-event@npm:13.5.0":
+"@testing-library/user-event@npm:*, @testing-library/user-event@npm:13.5.0":
   version: 13.5.0
   resolution: "@testing-library/user-event@npm:13.5.0"
   dependencies:
@@ -5157,6 +5157,19 @@ __metadata:
   version: 4.2.2
   resolution: "@types/aria-query@npm:4.2.2"
   checksum: 6f2ce11d91e2d665f3873258db19da752d91d85d3679eb5efcdf9c711d14492287e1e4eb52613b28e60375841a9e428594e745b68436c963d8bad4bf72188df3
+  languageName: node
+  linkType: hard
+
+"@types/babel__core@npm:7.1.17":
+  version: 7.1.17
+  resolution: "@types/babel__core@npm:7.1.17"
+  dependencies:
+    "@babel/parser": ^7.1.0
+    "@babel/types": ^7.0.0
+    "@types/babel__generator": "*"
+    "@types/babel__template": "*"
+    "@types/babel__traverse": "*"
+  checksum: 0108efab8acb6a8e0aab6f8113d5ef1fc4b58d40737aa70a3ee83112959e0880e5548374e7edb562e4e837cde4ae47265348b04eb7e684283b0dea418d013420
   languageName: node
   linkType: hard
 
@@ -5224,6 +5237,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/eslint-plugin-prettier@npm:3.1.0":
+  version: 3.1.0
+  resolution: "@types/eslint-plugin-prettier@npm:3.1.0"
+  dependencies:
+    "@types/eslint": "*"
+  checksum: e8fc9991cc181967a961c344ab894b57122e54b5f36950373f42638bb05847caef89a0e12decbb5b4a42e4eefaeefe63053ee2cbf6e1dfce43d77a445bbae728
+  languageName: node
+  linkType: hard
+
 "@types/eslint-scope@npm:^3.7.0":
   version: 3.7.1
   resolution: "@types/eslint-scope@npm:3.7.1"
@@ -5241,6 +5263,16 @@ __metadata:
     "@types/estree": "*"
     "@types/json-schema": "*"
   checksum: 18f37790afc57412c74c9a0ef9a8cc44c1237a3f3d70e3e4e3daad38ed501f1a70395ff3955d3e4b481a5d04e6819ad2c377cd287c7315b3b633f0f1bda7b4a2
+  languageName: node
+  linkType: hard
+
+"@types/eslint@npm:8.2.1":
+  version: 8.2.1
+  resolution: "@types/eslint@npm:8.2.1"
+  dependencies:
+    "@types/estree": "*"
+    "@types/json-schema": "*"
+  checksum: f32753ba184c212056f2bb7ee16937150a36e01da7eed15e2e179b7df76d0bbcbfa49972f30e9336f22be471c7f67fd91bcc8c25ff532462598de0f489df0cd8
   languageName: node
   linkType: hard
 
@@ -5478,7 +5510,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/prettier@npm:^2.1.5":
+"@types/prettier@npm:2.4.2, @types/prettier@npm:^2.1.5":
   version: 2.4.2
   resolution: "@types/prettier@npm:2.4.2"
   checksum: 76e230b2d11028af11fe12e09b2d5b10b03738e9abf819ae6ebb0f78cac13d39f860755ce05ac3855b608222518d956628f5d00322dc206cc6d1f2d8d1519f1e
@@ -5503,6 +5535,15 @@ __metadata:
   version: 6.9.7
   resolution: "@types/qs@npm:6.9.7"
   checksum: 7fd6f9c25053e9b5bb6bc9f9f76c1d89e6c04f7707a7ba0e44cc01f17ef5284adb82f230f542c2d5557d69407c9a40f0f3515e8319afd14e1e16b5543ac6cdba
+  languageName: node
+  linkType: hard
+
+"@types/react-dom@npm:17.0.2":
+  version: 17.0.2
+  resolution: "@types/react-dom@npm:17.0.2"
+  dependencies:
+    "@types/react": "*"
+  checksum: 1725928a1c3a0026044e6401e6b53729e1a88849034fc67138d7784ec44a5132fe2e9056a19b741ccb462ff0ec0d8c2c01ef316bda19be0e31f2ead9346f600b
   languageName: node
   linkType: hard
 
@@ -5549,6 +5590,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/sass@npm:1.43.1":
+  version: 1.43.1
+  resolution: "@types/sass@npm:1.43.1"
+  dependencies:
+    "@types/node": "*"
+  checksum: 19eb71acc4b0d7db2170732a51ad18a34007021f42069652a5be8a3e3a448a470d2f970b9e85f734d1896bf3a25e48fb5132b4a989c101eb5df21cc171d426c5
+  languageName: node
+  linkType: hard
+
 "@types/scheduler@npm:*":
   version: 0.16.2
   resolution: "@types/scheduler@npm:0.16.2"
@@ -5577,12 +5627,30 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/testing-library__jest-dom@npm:5.14.2":
+  version: 5.14.2
+  resolution: "@types/testing-library__jest-dom@npm:5.14.2"
+  dependencies:
+    "@types/jest": "*"
+  checksum: e08715a565cc189112a6611485d779a0f1ceb546a9d4601b21aacff7596d7acf8b7c702e4c5f825677431ff601df3e635887dc8a5735da1a263cc857eb7c3833
+  languageName: node
+  linkType: hard
+
 "@types/testing-library__jest-dom@npm:^5.9.1":
   version: 5.14.1
   resolution: "@types/testing-library__jest-dom@npm:5.14.1"
   dependencies:
     "@types/jest": "*"
   checksum: 77fe7ad3a9d49250972a0e3289b6d536942f95f0d539f32a917cf78c9422113d55c00de53b53dd4de1de49b68c8b500faea62e3017c4a64736cfbfbade749e04
+  languageName: node
+  linkType: hard
+
+"@types/testing-library__user-event@npm:4.2.0":
+  version: 4.2.0
+  resolution: "@types/testing-library__user-event@npm:4.2.0"
+  dependencies:
+    "@testing-library/user-event": "*"
+  checksum: 31ad1437c95210b19320b815f90e89e810a9a92344cb8ce258e53a555d3b74dd14d8317bab7fbc0c1286ce6048364c4d965878b38185c33c3f0f96f106412854
   languageName: node
   linkType: hard
 
@@ -9956,16 +10024,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-import-helpers@npm:1.2.0":
-  version: 1.2.0
-  resolution: "eslint-plugin-import-helpers@npm:1.2.0"
-  peerDependencies:
-    eslint: 5.x - 8.x
-  checksum: 539c2232f27b3212f4acea1073b9897964d8648e1af2eb4aaf428b71f05a182e7116a43e703a229823adb2f0aa8076d41f0c0c4bc087201e9ae84eee1b3d8f13
-  languageName: node
-  linkType: hard
-
-"eslint-plugin-import@npm:^2.25.2":
+"eslint-plugin-import@npm:2.25.3, eslint-plugin-import@npm:^2.25.2":
   version: 2.25.3
   resolution: "eslint-plugin-import@npm:2.25.3"
   dependencies:
@@ -15127,11 +15186,19 @@ __metadata:
     "@testing-library/jest-dom": 5.16.1
     "@testing-library/react": 12.1.2
     "@testing-library/user-event": 13.5.0
+    "@types/babel__core": 7.1.17
+    "@types/eslint": 8.2.1
+    "@types/eslint-plugin-prettier": 3.1.0
     "@types/jest": 27.0.3
     "@types/lodash": 4.14.177
     "@types/node": 16.11.12
+    "@types/prettier": 2.4.2
     "@types/react": 17.0.37
+    "@types/react-dom": 17.0.2
     "@types/react-redux": 7.1.20
+    "@types/sass": 1.43.1
+    "@types/testing-library__jest-dom": 5.14.2
+    "@types/testing-library__user-event": 4.2.0
     "@typescript-eslint/eslint-plugin": 5.6.0
     "@typescript-eslint/parser": 5.6.0
     axios: 0.24.0
@@ -15144,7 +15211,7 @@ __metadata:
     eslint: 7.32.0
     eslint-config-next: 12.0.7
     eslint-config-prettier: 8.3.0
-    eslint-plugin-import-helpers: 1.2.0
+    eslint-plugin-import: 2.25.3
     eslint-plugin-jest-dom: 3.9.2
     eslint-plugin-prettier: 4.0.0
     eslint-plugin-react: 7.27.1

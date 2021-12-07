@@ -1,5 +1,5 @@
-import type { NextApiRequest, NextApiResponse } from 'next'
 import { delay } from 'utils'
+import type { NextApiRequest, NextApiResponse } from 'next'
 
 export type HelloResponse = {
 	message: string

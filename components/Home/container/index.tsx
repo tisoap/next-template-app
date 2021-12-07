@@ -1,7 +1,6 @@
-import { getHello, loadingSelector, messageSelector } from 'ducks/hello'
 import { connect } from 'react-redux'
 import { createStructuredSelector } from 'reselect'
-
+import { getHello, loadingSelector, messageSelector } from 'ducks/hello'
 import { Home } from '../presentation'
 
 const mapStateToProps = createStructuredSelector({

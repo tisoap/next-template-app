@@ -2,9 +2,8 @@ import { screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import appClient from 'api-client/app'
 import { renderWithState } from 'utils/test-utils'
-import type { PartialAppState } from 'utils/test-utils'
-
 import { HomeContainer } from '.'
+import type { PartialAppState } from 'utils/test-utils'
 
 const initialState: PartialAppState = { hello: { message: 'Hello!' } }
 

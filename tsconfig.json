@@ -18,6 +18,12 @@
 		"baseUrl": ".",
 		"incremental": true
 	},
-	"include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
-	"exclude": ["node_modules", ".yarn", "e2e/**/*.ts"]
+	"include": [
+		"next-env.d.ts",
+		"**/*.ts",
+		"**/*.tsx",
+		".eslintrc.js",
+		"next.config.js"
+	],
+	"exclude": ["node_modules", ".yarn"]
 }

@@ -1,7 +1,6 @@
-import type { Meta, Story } from '@storybook/react/types-6-0'
-
-import type { HomeProps } from '.'
 import { Home } from '.'
+import type { HomeProps } from '.'
+import type { Meta, Story } from '@storybook/react/types-6-0'
 
 export default {
 	title: 'Home',

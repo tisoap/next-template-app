@@ -1,5 +1,4 @@
-import { Selector } from 'testcafe'
-
+import { Selector, test, fixture } from 'testcafe'
 import { TEST_URL } from '../constants'
 
 fixture`Home Page`.page`${TEST_URL}`

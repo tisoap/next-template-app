@@ -1,15 +1,15 @@
 import { configureStore } from '@reduxjs/toolkit'
-import type { EnhancedStore } from '@reduxjs/toolkit'
 import { render } from '@testing-library/react'
-import type { RenderOptions, RenderResult } from '@testing-library/react'
-import type { AppState } from 'ducks/state'
-import { appInitialState } from 'ducks/state'
 import { merge, cloneDeep } from 'lodash'
+import React from 'react'
+import { Provider as StoreProvider } from 'react-redux'
+import { appInitialState } from 'ducks/state'
 import { ThemeProvider } from 'providers'
 import { rootReducer } from 'providers/store'
-import React from 'react'
+import type { EnhancedStore } from '@reduxjs/toolkit'
+import type { RenderOptions, RenderResult } from '@testing-library/react'
+import type { AppState } from 'ducks/state'
 import type { ReactElement } from 'react'
-import { Provider as StoreProvider } from 'react-redux'
 
 const createStore = (state = {}) =>
 	configureStore({

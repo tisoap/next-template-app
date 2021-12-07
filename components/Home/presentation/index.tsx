@@ -1,8 +1,7 @@
 import { Button, Center, Text, Box } from '@chakra-ui/react'
 import Head from 'next/head'
-import type { VoidFunctionComponent } from 'react'
-
 import styles from './styles.module.scss'
+import type { VoidFunctionComponent } from 'react'
 
 export interface HomeProps {
 	loading?: boolean

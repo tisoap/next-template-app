@@ -10,5 +10,4 @@
   "[json]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-	"quokka.automaticStartRegex": "(?<!\\.test)\\.(js|ts|jsx|tsx)$"
 }

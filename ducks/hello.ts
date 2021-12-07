@@ -1,7 +1,6 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit'
-import { appClient } from 'api-client'
 import { createSelector } from 'reselect'
-
+import { appClient } from 'api-client'
 import type { AppState } from './state'
 
 export const getHello = createAsyncThunk('hello/getHello', async () => {
