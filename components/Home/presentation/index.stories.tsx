@@ -9,5 +9,5 @@ export default {
 
 const Template: Story<HomeProps> = (args) => <Home {...args} />
 
-export const home = Template.bind({})
-home.args = { message: 'Hello!', loading: false }
+export const HomeExample = Template.bind({})
+HomeExample.args = { message: 'Hello!', loading: false }

@@ -1,4 +1,5 @@
 const path = require('path')
+
 const tsConfigPath = path.resolve(__dirname, 'tsconfig.json')
 
 module.exports = {
@@ -51,7 +52,8 @@ module.exports = {
 		'plugin:import/typescript',
 		'plugin:jest-dom/recommended',
 		'plugin:testing-library/react',
-		'plugin:testcafe/recommended'
+		'plugin:testcafe/recommended',
+		'plugin:storybook/recommended'
 	],
 	rules: {
 		'@typescript-eslint/explicit-module-boundary-types': 'off',

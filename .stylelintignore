@@ -1,7 +1,0 @@
-node_modules
-.next
-.vscode
-.storybook
-storybook-static
-coverage
-**/*.js
