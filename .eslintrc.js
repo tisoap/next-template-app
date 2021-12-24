@@ -38,7 +38,8 @@ module.exports = {
 		'import',
 		'jest-dom',
 		'testing-library',
-		'testcafe'
+		'testcafe',
+		'sonarjs'
 	],
 	extends: [
 		'eslint:recommended',
@@ -53,7 +54,8 @@ module.exports = {
 		'plugin:jest-dom/recommended',
 		'plugin:testing-library/react',
 		'plugin:testcafe/recommended',
-		'plugin:storybook/recommended'
+		'plugin:storybook/recommended',
+		'plugin:sonarjs/recommended'
 	],
 	rules: {
 		'@typescript-eslint/explicit-module-boundary-types': 'off',

@@ -13,5 +13,13 @@
 		"yarn.lock"
 	],
 	"allowCompoundWords": false,
-	"words": ["Tiso", "Puccinelli", "chakra", "reduxjs", "testcafe", "Vercel"]
+	"words": [
+		"chakra",
+		"Puccinelli",
+		"reduxjs",
+		"sonarjs",
+		"testcafe",
+		"Tiso",
+		"Vercel"
+	]
 }

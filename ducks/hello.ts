@@ -4,8 +4,7 @@ import { appClient } from 'api-client'
 import type { AppState } from './state'
 
 export const getHello = createAsyncThunk('hello/getHello', async () => {
-	const data = await appClient.getHello()
-	return data
+	return await appClient.getHello()
 })
 
 export type HelloState = {
