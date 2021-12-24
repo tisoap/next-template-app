@@ -15,7 +15,7 @@ jobs:
       - name: Install Dependencies
         run: yarn install --silent
       - name: Run Code Linter
-        run: yarn lint-code
+        run: yarn lint
       - name: Run Unit Tests
         run: yarn test
       - name: Publish to Storybook
