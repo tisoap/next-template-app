@@ -1,4 +1,4 @@
-import { Button, Center, Text, Box } from '@chakra-ui/react'
+import { Button, Center, Text, Box, Link } from '@chakra-ui/react'
 import Head from 'next/head'
 
 export interface HomeProps {
@@ -29,6 +29,18 @@ export const Home = ({ loading, message, onClick }: HomeProps) => {
 					bg='white'
 				>
 					<Center h='100%' display='flex' flexDirection='column'>
+						<Text mb={4}>
+							Check the instructions on how to use this template&nbsp;
+							<Link
+								color='blue.500'
+								textDecoration='underline'
+								href='https://github.com/tisoap/next-template-app#next-template-app'
+								isExternal
+							>
+								here
+							</Link>
+							.
+						</Text>
 						<Button
 							onClick={() => onClick()}
 							isLoading={loading}
