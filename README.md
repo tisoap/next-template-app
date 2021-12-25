@@ -26,7 +26,7 @@ This project was bootstrapped using [next-template-app](https://github.com/tisoa
 - [Yarn](https://yarnpkg.com/lang/en/)
 - [Chrome](https://www.google.com/intl/en-US/chrome/)
 
-## Installation and project initialization
+## Installation
 
 Clone this project using Git. In a terminal, navigate to the cloned project's root folder, and run the following command:
 
@@ -35,6 +35,20 @@ yarn && yarn dev
 ```
 
 Once ready, open [localhost:3000](http://localhost:3000) in you browser.
+
+### Enabling GitHub Actions
+
+Once you push your project to your own GitHub repo, you need to add some configurations so all the GitHub actions here work properly. If you don't want those, you can delete the `.github/workflows` folder.
+
+For the [Code Quality](https://codeql.github.com/) analysis, [enable code scanning on your repository](https://docs.github.com/en/code-security/code-scanning/automatically-scanning-your-code-for-vulnerabilities-and-errors/setting-up-code-scanning-for-a-repository).
+
+For [Chromatic](https://www.chromatic.com/), you need to create and account there, add your GitHub project, and add a `CHROMATIC_PROJECT_TOKEN` to your project secrets, [as instructed here](https://www.chromatic.com/docs/github-actions.html).
+
+For [Vercel deploy](https://vercel.com) with E2E testing, you need to add `VERCEL_ORG_ID`, `VERCEL_PROJECT_ID` and `VERCEL_TOKEN` to your project secrets.
+
+1. You can get both `VERCEL_ORG_ID`, `VERCEL_PROJECT_ID` by linking your project with your vercel account using the `vercel` CLI command, and checking the file created at `.vercel/project.json` in your project. [Further action instructions here](https://github.com/marketplace/actions/deploy-to-vercel-action#vercel-project).
+
+2. The `VERCEL_TOKEN` one can be generated on your [Vercel token page](https://vercel.com/account/tokens), make sure to create a unique one.
 
 ## Commands
 
