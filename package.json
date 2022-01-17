@@ -15,7 +15,8 @@
 		"build": "yarn build-storybook && next build",
 		"check": "yarn type-check && yarn spellcheck && yarn lint && yarn test",
 		"dev": "dotenv -e .local.env next dev",
-		"lint": "eslint --fix ./ --ext .js,.ts,.tsx",
+		"generate-theme-typings": "chakra-cli tokens --strict-component-types ./providers/theme.ts",
+		"lint": "eslint --report-unused-disable-directives --fix ./ --ext .js,.ts,.tsx",
 		"spellcheck": "cspell --no-progress '**/*.{js,jsx,ts,tsx,json,css,scss,md,mdx}'",
 		"start": "next start",
 		"storybook": "start-storybook -p 6006 --quiet",
@@ -45,6 +46,7 @@
 	"devDependencies": {
 		"@babel/core": "7.16.7",
 		"@babel/preset-typescript": "7.16.7",
+		"@chakra-ui/cli": "1.7.0",
 		"@storybook/addon-actions": "6.4.13",
 		"@storybook/addon-essentials": "6.4.13",
 		"@storybook/addon-links": "6.4.13",
