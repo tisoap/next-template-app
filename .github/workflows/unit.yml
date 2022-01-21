@@ -14,11 +14,9 @@ jobs:
           node-version: "14.x"
       - name: Install Dependencies
         run: yarn install --silent
-      - name: Run Code Linter
-        run: yarn lint
-      - name: Run Unit Tests
-        run: yarn test
-      - name: Publish to Storybook
+      - name: Check Code
+        run: yarn check
+      - name: Publish Storybook
         uses: chromaui/action@v1
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
