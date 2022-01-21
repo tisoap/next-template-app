@@ -24,7 +24,7 @@ This project was bootstrapped using [next-template-app](https://github.com/tisoa
 - [Git](https://git-scm.com/)
 - [Node](https://nodejs.org/en/)
 - [Yarn](https://yarnpkg.com/lang/en/)
-- [Chrome](https://www.google.com/intl/en-US/chrome/)
+- [Firefox](https://www.mozilla.org/en-US/firefox/new/)
 
 ## Installation
 
@@ -52,16 +52,18 @@ For [Vercel deploy](https://vercel.com) with E2E testing, you need to add `VERCE
 
 ## Commands
 
-- `yarn build`: Creates a production build from this project
 - `yarn build-storybook`: Creates a production build from the component library docs
+- `yarn build`: Creates a production build from this project
+- `yarn check`: Runs type and spell checking, code linter and unit tests
 - `yarn dev`: Starts the project with hot reload at `http://localhost:3000`
+- `yarn generate-theme-typings`: Generates TypeScript typings for your custom Chakra theme (runs automatically on post-install)
 - `yarn lint`: Runs the code linter
+- `yarn spellcheck`: Checks for spelling typos in code
 - `yarn start`: Starts the project at `http://localhost:3000`, but you need to execute the `yarn build` command beforehand
 - `yarn storybook`: Starts the component library docs with hot reload at `http://localhost:6006`
+- `yarn test-e2e`: Runs all end to end tests using the locally installed Firefox browser, but you need to have started the project in another terminal for it to work
 - `yarn test`: Runs all unit tests and code coverage report
-- `yarn test-e2e`: Runs all end to end tests using the locally installed Chrome browser, but you need to have started the project in another terminal for it to work
 - `yarn type-check`: Check validity of all types in the project
-- `yarn spellcheck`: Checks for spelling typos in code
 
 ## Technologies
 
