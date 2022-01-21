@@ -55,6 +55,7 @@ For [Vercel deploy](https://vercel.com) with E2E testing, you need to add `VERCE
 - `yarn build-storybook`: Creates a production build from the component library docs
 - `yarn build`: Creates a production build from this project
 - `yarn check`: Runs type and spell checking, code linter and unit tests
+- `yarn coverage`: Runs unit tests and opens a code coverage report on `http://127.0.0.1:8080/`
 - `yarn dev`: Starts the project with hot reload at `http://localhost:3000`
 - `yarn generate-theme-typings`: Generates TypeScript typings for your custom Chakra theme (runs automatically on post-install)
 - `yarn lint`: Runs the code linter
