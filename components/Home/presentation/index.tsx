@@ -1,11 +1,4 @@
-import {
-	Button,
-	Center,
-	Text,
-	Box,
-	Link,
-	useColorModeValue
-} from '@chakra-ui/react'
+import { Button, Center, Text, Box, Link } from '@chakra-ui/react'
 import Head from 'next/head'
 
 export interface HomeProps {
@@ -17,16 +10,13 @@ export interface HomeProps {
 export const Home = ({ loading, message, onClick }: HomeProps) => {
 	const text = message || '...?'
 
-	const background = useColorModeValue('gray.50', 'gray.800')
-	const foreground = useColorModeValue('white', 'gray.700')
-
 	return (
 		<>
 			<Head>
 				<title>App</title>
 				<link rel='icon' href='/favicon.ico' />
 			</Head>
-			<Center height='100%' p={3} backgroundColor={background}>
+			<Center height='100%' p={3} bg='background'>
 				<Box
 					as='main'
 					w='100%'
@@ -36,7 +26,7 @@ export const Home = ({ loading, message, onClick }: HomeProps) => {
 					boxShadow='md'
 					p='6'
 					rounded='md'
-					bg={foreground}
+					bg='foreground'
 				>
 					<Center h='100%' display='flex' flexDirection='column'>
 						<Text mb={4}>
