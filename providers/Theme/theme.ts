@@ -1,7 +1,4 @@
 import { extendTheme } from '@chakra-ui/react'
-import { mode } from '@chakra-ui/theme-tools'
-import { Dict } from '@chakra-ui/utils'
-import type { StyleFunctionProps } from '@chakra-ui/theme-tools'
 
 const semanticTokens = {
 	colors: {
@@ -17,17 +14,17 @@ const semanticTokens = {
 }
 
 const styles = {
-	global: (props: Dict | StyleFunctionProps) => ({
+	global: {
 		'html, body, #__next, #root': {
 			height: '100%',
 			width: '100%',
 			minWidth: '320px',
 			minHeight: '400px',
-			bg: mode('gray.50', 'gray.800')(props) as string,
+			bg: 'background',
 			padding: 0,
 			margin: 0
 		}
-	})
+	}
 }
 
 export const theme = extendTheme({ styles, semanticTokens })
