@@ -12,12 +12,8 @@ const config = {
 	},
 	collectCoverage: true,
 	collectCoverageFrom: [
-		'api-client/**/*.ts',
-		'components/**/*.{ts, tsx}',
-		'!components/**/*.stories.{ts, tsx}',
-		'ducks/**/*.ts',
-		'providers/**/*.{ts, tsx}',
-		'server/**/*.ts'
+		'components/**/*.presentation.tsx',
+		'components/**/*.container.tsx'
 	],
 	coverageThreshold: {
 		global: {

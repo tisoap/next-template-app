@@ -1,13 +1,14 @@
-import { ThemeProvider, StoreProvider } from 'providers'
+import { Layout } from 'components/Layout'
+import { Providers } from 'providers'
 import type { AppProps } from 'next/app'
 
 function MyApp({ Component, pageProps }: AppProps): JSX.Element {
 	return (
-		<StoreProvider>
-			<ThemeProvider>
+		<Providers>
+			<Layout>
 				<Component {...pageProps} />
-			</ThemeProvider>
-		</StoreProvider>
+			</Layout>
+		</Providers>
 	)
 }
 

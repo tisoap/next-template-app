@@ -1,49 +1,48 @@
 import { configureStore } from '@reduxjs/toolkit'
 import { render } from '@testing-library/react'
 import { merge, cloneDeep } from 'lodash'
-import React from 'react'
+import { StrictMode } from 'react'
 import { Provider as StoreProvider } from 'react-redux'
-import { appInitialState } from 'ducks/state'
-import { ThemeProvider } from 'providers'
+import { initialState } from 'providers/Store'
 import { rootReducer } from 'providers/Store/store'
+import { ThemeProvider } from 'providers/Theme'
 import type { EnhancedStore } from '@reduxjs/toolkit'
 import type { RenderOptions, RenderResult } from '@testing-library/react'
-import type { AppState } from 'ducks/state'
+import type { AppState } from 'providers/Store'
 import type { ReactElement } from 'react'
+import type { PartialDeep } from 'type-fest'
 
-const createStore = (state = {}) =>
+const createStore = (state: AppState) =>
 	configureStore({
 		reducer: rootReducer,
 		preloadedState: state
 	})
 
-type DeepPartial<T> = {
-	[P in keyof T]?: DeepPartial<T[P]>
-}
-
-export type PartialAppState = DeepPartial<AppState>
+export type PartialAppState = PartialDeep<AppState>
 
 export interface Options extends RenderOptions {
-	state: PartialAppState
+	state?: PartialAppState
 }
 
 export interface Result extends RenderResult {
 	store: EnhancedStore
 }
 
-export const renderWithState = (
+export const renderWithProviders = (
 	component: ReactElement,
-	options: Options
+	options: Options = {}
 ): Result => {
-	const { state, ...renderOptions } = options
-	const initialStateClone = cloneDeep(appInitialState)
+	const { state = {}, ...renderOptions } = options
+	const initialStateClone = cloneDeep(initialState)
 	const customInitialState: AppState = merge(initialStateClone, state)
 	const store = createStore(customInitialState)
 
 	const view = render(
-		<ThemeProvider>
-			<StoreProvider store={store}>{component}</StoreProvider>
-		</ThemeProvider>,
+		<StrictMode>
+			<ThemeProvider>
+				<StoreProvider store={store}>{component}</StoreProvider>
+			</ThemeProvider>
+		</StrictMode>,
 		renderOptions
 	)
 

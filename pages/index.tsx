@@ -1,8 +1,11 @@
-import { Home } from 'components'
-import type { VoidFunctionComponent } from 'react'
+import { Center, Heading } from '@chakra-ui/react'
 
-const HomePage: VoidFunctionComponent = () => {
-	return <Home />
+const HomePage = () => {
+	return (
+		<Center p={5}>
+			<Heading>Index Page</Heading>
+		</Center>
+	)
 }
 
 export default HomePage
