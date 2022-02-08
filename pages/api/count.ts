@@ -1,17 +1,19 @@
 import { delay } from 'utils'
 import type { NextApiRequest, NextApiResponse } from 'next'
 
-export type HelloResponse = {
-	message: string
+export type CountResponse = {
+	count: number
 }
 
-export const hello = async (
+export const count = async (
 	req: NextApiRequest,
-	res: NextApiResponse<HelloResponse>
+	res: NextApiResponse<CountResponse>
 ): Promise<void> => {
 	await delay(1000)
 	res.statusCode = 200
 	return res.json({
-		message: 'Hello! This message was fetched from a Next API route'
+		count: 2
 	})
 }
+
+export default count

@@ -1,9 +1,14 @@
-import { delay } from 'utils'
+import axios from 'axios'
+import type { CountResponse } from 'pages/api/count'
 
-// A mock function to mimic making an async request for data
-const fetchCount = async (amount = 1) => {
-	await delay(500)
-	return { data: amount }
+export const api = axios.create({
+	baseURL: '/api',
+	timeout: 5000
+})
+
+const fetchCount = async () => {
+	const response = await api.get<CountResponse>('/count')
+	return response.data.count
 }
 
 export const apiClient = {

@@ -22,7 +22,7 @@ describe('Counter Container', () => {
 		expect(screen.getByText('0')).toBeInTheDocument()
 
 		const spy = jest.spyOn(apiClient, 'fetchCount')
-		spy.mockReturnValue(Promise.resolve({ data: 5 }))
+		spy.mockReturnValue(Promise.resolve(5))
 
 		const input = screen.getByLabelText('Set increment amount')
 		fireEvent.change(input, { target: { value: '5' } })
