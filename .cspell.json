@@ -22,6 +22,7 @@
 		"sonarjs",
 		"testcafe",
 		"Tiso",
-		"Vercel"
+		"Vercel",
+		"yarnpkg"
 	]
 }
