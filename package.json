@@ -22,7 +22,7 @@
 		"spellcheck": "cspell --no-progress '**/*.{js,jsx,ts,tsx,json,css,scss,md,mdx}'",
 		"start": "next start",
 		"storybook": "start-storybook -p 6006 --quiet",
-		"test": "jest --config jest.config.ts --no-cache",
+		"test": "jest --config jest.config.ts",
 		"test-e2e": "dotenv -e .local.env testcafe firefox:headless e2e/tests",
 		"type-check": "tsc --noEmit"
 	},
