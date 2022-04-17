@@ -19,7 +19,7 @@ export const Counter = () => {
 			onDecrement={() => dispatch(decrement())}
 			onIncrement={() => dispatch(increment())}
 			onIncrementByAmount={(value) => dispatch(incrementByAmount(value))}
-			onIncrementAsync={() => dispatch(incrementAsync())}
+			onIncrementAsync={() => void dispatch(incrementAsync())}
 			onIncrementIfOdd={(value) => dispatch(incrementIfOdd(value))}
 		/>
 	)
