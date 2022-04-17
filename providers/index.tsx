@@ -1,9 +1,9 @@
 import { StrictMode } from 'react'
 import { StoreProvider } from './Store'
 import { ThemeProvider } from './Theme'
-import type { FunctionComponent } from 'react'
+import type { ReactNode } from 'react'
 
-export const Providers: FunctionComponent = ({ children }) => {
+export const Providers = ({ children }: { children: ReactNode }) => {
 	return (
 		<StrictMode>
 			<StoreProvider>
