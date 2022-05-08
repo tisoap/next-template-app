@@ -44,6 +44,9 @@ export const Layout = ({ year = currentYear, children }: LayoutProps) => {
 					<Link href='/counter' passHref>
 						<ChakraLink>Counter</ChakraLink>
 					</Link>
+					<Link href='/graph' passHref>
+						<ChakraLink>Graph</ChakraLink>
+					</Link>
 				</HStack>
 			</Flex>
 			<Container as='main' flex={1} px={5} maxW='container.md'>

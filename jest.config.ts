@@ -4,7 +4,7 @@ import nextJest from 'next/jest'
 const createJestConfig = nextJest({ dir: './' })
 
 const config = createJestConfig({
-	testEnvironment: 'jest-environment-jsdom',
+	testEnvironment: 'jsdom',
 	setupFilesAfterEnv: ['<rootDir>/jest.setup.ts'],
 	collectCoverage: true,
 	collectCoverageFrom: [
