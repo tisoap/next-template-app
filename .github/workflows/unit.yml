@@ -15,7 +15,7 @@ jobs:
       - name: Install Dependencies
         run: yarn install --silent
       - name: Check Code
-        run: yarn check
+        run: yarn check-repo
       - name: Publish Storybook
         uses: chromaui/action@v1
         with:
